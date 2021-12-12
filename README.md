@@ -105,7 +105,7 @@ Miraml 是一个基础的描述视频制作的文件，可以用 XML 或者 JSON
 * `height`: `720rpx`
 * `x`: `180rpx`
 * `y`: `320rpx`
-* `start`: 在本 scene 中开始的时间。缺省 `2`
+* `start`: 在本 scene 中开始的时间。缺省 `0`
 * `end`: 在本 scene 中结束的时间。缺省 `2`
 
 
@@ -121,4 +121,34 @@ Miraml 是一个基础的描述视频制作的文件，可以用 XML 或者 JSON
 * 数字或者`s` - 秒
 * `beat` - 以画布的 beat 为单位计算实际时长，比如 `beat="3s"`, `end="2beat"`  就等同于 `end="6s"`
 
-特例： 只有 canvas 的 width，height 不可以使用 rpx 、vh 、 vw 单位， canvas 的 beat 不可以使用 beat 单位
+特例： 只有 `canvas` 的 `width`，`height` 不可以使用 `rpx` 、`vh` 、 `vw` 单位， `canvas` 的 `beat` 不可以使用 `beat` 单位
+
+测试用例如下：
+
+    >>> conv = lambda x: measure(x, width=1080, height=720, beat=0.5)
+    >>> conv(1)
+    1
+    >>> conv(1.0)
+    1.0
+    >>> conv('100px')
+    100
+    >>> conv('100.0px')
+    100
+    >>> conv('-100.5px')
+    -100
+    >>> conv('180rpx')
+    540
+    >>> conv('50vw')
+    540
+    >>> conv('50vh')
+    360
+    >>> conv('1s')
+    1.0
+    >>> conv('5beat')
+    2.5
+
+## 缺省值
+
+只有一个地方进行了计算，就是 scene 的 duration 属性，这个属性按照此 scene 中最长的片段计算 duration 。
+如果计算值为 0 ，为了保证可以至少看到， 会被设为 2
+
