@@ -2,7 +2,7 @@
 
 NFT 的所有 token 天生有结构化的信息，而且数量众多，可以使用 MiraML 自动化的为每一个 NFT 生成视频。
 
-```
+```html
 <!--
     MiraML 支持变量，如下把 contract id 赋值给一个变量，
     在本文档里面可以多次使用
@@ -99,3 +99,7 @@ https://cos.mirav.cn/jianshuo/beats.mp3
 
 https://cos.mirav.cn/jianshuo/Ink-67358.mp4
 # Thanks for watching```
+
+如上的代码生成如下视频：
+
+> https://cos.mirav.cn/public2/video_469.mp4
