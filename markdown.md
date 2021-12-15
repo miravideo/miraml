@@ -5,7 +5,7 @@ Miraml 是一个基础的描述视频制作的文件，支持markdown。
 如下是一个基本的结构：
 ```
 <!-- 图片 -->
-https://avatars.githubusercontent.com/u/2012831?s=48&v=4#.jpg
+https://wallpaperaccess.com/full/508751.jpg
 
 # *这是1级标题*
 ## *这是2级标题*
@@ -17,7 +17,7 @@ https://avatars.githubusercontent.com/u/2012831?s=48&v=4#.jpg
 
 ---
 
-https://avatars.githubusercontent.com/u/2012831?s=48&v=4#.jpg [width="100rpx" height="100rpx"]
+https://wallpaperaccess.com/full/495111.jpg [width="256rpx" height="256rpx"]
 
     # *这是一级标题* [color="red" y="10vh"]
     ## *这是2级标题*
@@ -27,10 +27,10 @@ https://avatars.githubusercontent.com/u/2012831?s=48&v=4#.jpg [width="100rpx" he
     ###### *这是6级标题*
 *这是普通文字*
 ```
-> https://cos.mirav.cn/public2/video_513.mp4
+> https://cos.mirav.cn/public2/video_80.mp4
 
 ## 标题
-标题在行首使用 1-6 个 # 字符，对应于标题级别 1-6。例如：
+标题在行首使用 1-6 个 `#` 字符，对应于标题级别 1-6。例如：
 ```
 这是普通文本
 # 这是1级标题
@@ -41,8 +41,9 @@ https://avatars.githubusercontent.com/u/2012831?s=48&v=4#.jpg [width="100rpx" he
 ###### 这是6级标题
 ```
 > https://cos.mirav.cn/public2/scene这是普通文d0b8460.mp4
+
 ## 语音播报
-语音播报在文本左侧和右侧各使用 1 个 * 字符。例如：
+语音播报在文本左侧和右侧各使用 1 个 `*` 字符。例如：
 ```
 # *语音播报*
 *这是第一句话*
@@ -53,28 +54,35 @@ https://avatars.githubusercontent.com/u/2012831?s=48&v=4#.jpg [width="100rpx" he
 ## 背景
 可以直接输入图片/视频链接（若链接不是以 .文件格式 结尾，需要加 #.文件格式）
 ```
-https://avatars.githubusercontent.com/u/2012831?s=60&v=4#.jpg
+https://wallpaperaccess.com/full/508751.jpg
 # *背景图片*
 ```
-> https://cos.mirav.cn/public2/video_374.mp4
+> https://cos.mirav.cn/public2/video_830.mp4
+
+```
+https://mira-1255830993.cos.ap-shanghai.myqcloud.com/public2/pexels-caroline-veronez-9917770.mp4
+# *背景视频*
+```
+> https://cos.mirav.cn/public2/video_258.mp4
 
 ## 场景分割
-场景之间使用一行 --- 字符进行分割。例如：
+场景之间使用一行 `---` 字符进行分割。例如：
 ```
 # *场景分割*
 ---
-https://avatars.githubusercontent.com/u/2012831?s=60&v=4#.jpg
+https://wallpaperaccess.com/full/508751.jpg
 # *这是第一个场景*
-有图
+图片
 ---
+https://cos.mirav.cn/public2/pexels-caroline-veronez-9917770.mp4
 # *这是第二个场景*
-无图
+视频
 ---
-https://avatars.githubusercontent.com/u/2012831?s=60&v=4#.jpg
+https://wallpaperaccess.com/full/495111.jpg
 # *这是最后一个场景*
-有图
+图片
 ```
-> https://cos.mirav.cn/public2/video_358.mp4
+> https://cos.mirav.cn/public2/video_932.mp4
 
 ## 注释
 注释行左侧使用 `<!--` ，右侧使用 `-->`。
@@ -84,24 +92,25 @@ https://avatars.githubusercontent.com/u/2012831?s=60&v=4#.jpg
 ```
 > https://cos.mirav.cn/public2/video_197.mp4
 
-## tag (更多tag -> README.md)
+## 属性 (更多属性 -> README.md)
+可以在行尾添加中括号 `[]` ，中括号内可自定义物体属性，格式为 `[attributeName1="attributeVal1" attributeName2="attributeVal2 attributeName3="attributeVal3""]` ，多组属性以空格分割。
 ```
 <!-- 将图片长宽均设置为100rpx -->
-https://avatars.githubusercontent.com/u/2012831?s=48&v=4#.jpg [width="100rpx" height="100rpx"]
+https://wallpaperaccess.com/full/508751.jpg [width="100rpx" height="100rpx"]
 # *tag 1* [color="white" y="10vh"]
 ## *tag 2*
 ### *tag 3*
 tag 4
 ```
-> https://cos.mirav.cn/public2/video_560.mp4
+> https://cos.mirav.cn/public2/video_587.mp4
 
 ## 代码块
-同级递进的文本将共享同一tag
+同级递进的文本将共享同一属性
 ```
-<!-- 同级递进的 3 个tag -->
-    # *tag 1* [color="white" y="10vh"]
-    ## *tag 2*
-    ### *tag 3*
-tag 4
+<!-- 同级递进的 3 行文本 -->
+    # *line 1* [color="white" y="10vh"]
+    ## *line 2*
+    ### *line 3*
+line 4
 ```
-> https://cos.mirav.cn/public2/video_591.mp4
+> https://cos.mirav.cn/public2/video_759.mp4
