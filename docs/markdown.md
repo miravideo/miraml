@@ -66,14 +66,14 @@ https://mira-1255830993.cos.ap-shanghai.myqcloud.com/public2/pexels-caroline-ver
 > https://cos.mirav.cn/public2/video_258.mp4
 
 ## 场景分割
-场景之间使用一行 `---` 字符进行分割。例如：
+场景之间使用一行三个或以上 - 字符进行分割。例如：
 ```
 # *场景分割*
 ---
 https://wallpaperaccess.com/full/508751.jpg
 # *这是第一个场景*
 图片
----
+---------------------
 https://cos.mirav.cn/public2/pexels-caroline-veronez-9917770.mp4
 # *这是第二个场景*
 视频
@@ -83,6 +83,21 @@ https://wallpaperaccess.com/full/495111.jpg
 图片
 ```
 > https://cos.mirav.cn/public2/video_932.mp4
+
+同时，--- 后面也可以添加属性标签，比如
+```
+{{tag('backgrounds')|random}}
+--- [duration="5" transition="wipeleft" transitionDuration="1"]
+{{tag('backgrounds')|random}}
+*abc*
+--- [duration="3" transition="wiperight" transitionDuration="1"]
+{{tag('backgrounds')|random}}
+*123*
+---- [duration="2"]
+{{tag('backgrounds')|random}}
+*alpha*
+```
+> https://cos.mirav.cn/cocafe/canvasheiga490.htm
 
 ## 注释
 注释行左侧使用 `<!--` ，右侧使用 `-->`。
