@@ -118,14 +118,3 @@ https://wallpaperaccess.com/full/508751.jpg [width="100rpx" height="100rpx"]
 tag 4
 ```
 > https://cos.mirav.cn/public2/canvasheig936d.mp4
-
-## 文本块
-同级递进的文本块将共享同一属性
-```
-<!-- 同级递进的 3 行文本 -->
-    # *line 1* [color="white" y="10vh"]
-    ## *line 2*
-    ### *line 3*
-line 4
-```
-> https://cos.mirav.cn/public2/canvasheigd2ec.mp4
