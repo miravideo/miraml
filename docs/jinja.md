@@ -65,7 +65,7 @@ MiraML 里面可以写一些程序的语句，控制变量，循环等等。
 
 这两种方法基本相同（深层次的区别可以暂不考虑）
 
-Filter 过滤器()
+## Filter 过滤器()
 
 一个 filter 过滤器的本质就是一个 function 函数。使用格式为：变量名 | 函数。
 它做到的就是，把变量传给函数，然后再把函数返回值作为这个代码块的值。
@@ -95,12 +95,9 @@ Filter 过滤器()
 {% endfilter %}
 ```
 
-Jinja2 常用过滤器
+### Jinja2 常用过滤器
 
-```
 safe：禁用转义
-
-
 ```
 {{ '<em>hello</em>' | safe }}
 ```
@@ -115,6 +112,7 @@ capitalize：把变量值的首字母转成大写，其余字母转小写
 lower：把值转成小写
 ```
 {{ 'HELLO' | lower }}```
+```
 
 
 upper：把值转成大写
@@ -140,6 +138,7 @@ format：格式化输出
 {{ '%s is %d' | format('name',17) }}
 ```
 
+
 striptags：渲染之前把值中所有的 HTML 标签都删掉
 ```
 {{ '<em>hello</em>' | striptags }}
@@ -152,7 +151,7 @@ truncate: 字符串截断
 ```
 
 
-列表操作：
+### 列表操作：
 
 first：取第一个元素
 ```
@@ -185,7 +184,7 @@ sort：列表排序
 ```
 
 
-###  Members<
+##  Members
 
 ```
 {% for user in users %}
@@ -202,7 +201,7 @@ As variables in templates retain their object properties, it is possible to iter
 {% endfor %}
 ```
 
-### 循环索引
+## 循环索引
 
 loop.index: 循环当前迭代(从 1 开始)。
 loop.index0: 循环当前迭代(从 0 开始)。
