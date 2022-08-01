@@ -5,12 +5,9 @@ Miraml 是一个基础的描述视频制作的文件，可以用 XML 或者 JSON
 如下是一个基本的结构：
 ```xml
 <miraml version="1.0">
-    <canvas width="1080" height="720" beat="1">
-        <scene>
-            <image path="https://cos.mirav.cn/jianshuo/render.jpg" x="180rpx" y="180rpx" width="360rpx" height="240rpx">
-            <video path="https://cos.mirav.cn/jianshuo/render.mp4" x="180rpx" y="180rpx" width="360rpx" height="240rpx">
-            <text text="Sample Text" color="red" fontFamily="verdana" fontSize="30rpx" x="20rpx" y="20rpx">
-        </scene>
+    <canvas width="1080" height="720">
+        <image path="https://cos.mirav.cn/jianshuo/render.jpg" x="50vw" y="50vh" width="100vw">
+        <video path="https://cos.mirav.cn/jianshuo/render.mp4" x="50vw" y="50vh" width="100vw">
     </canvas>
 </miraml>
 ```
